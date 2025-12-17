@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <title>Visit | Art Gallery</title>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'gallery-black': '#121212',
+                        'gallery-white': '#fafafa',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="assets/js/theme-toggle.js"></script>
+</head>
+<body class="bg-gallery-white dark:bg-gallery-black text-gray-900 dark:text-gray-100 transition-colors duration-300 antialiased">
+
+    <div id="navbar-placeholder"></div>
+
+    <main class="pt-32 pb-24 min-h-screen">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <header class="mb-20">
+                <h1 class="text-5xl md:text-7xl font-serif mb-6 text-gray-900 dark:text-white">Plan Your Visit</h1>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24">
+                
+                <!-- Info Column -->
+                <div class="space-y-16">
+                    
+                    <!-- Hours -->
+                    <section>
+                        <h2 class="text-2xl font-serif mb-6 border-b border-gray-200 dark:border-gray-800 pb-2">Opening Hours</h2>
+                        <div class="space-y-2 text-lg font-light">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Tuesday — Sunday</span>
+                                <span>10:00 am — 6:00 pm</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Thursday</span>
+                                <span>10:00 am — 8:00 pm</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Monday</span>
+                                <span>Closed</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Admission -->
+                    <section>
+                        <h2 class="text-2xl font-serif mb-6 border-b border-gray-200 dark:border-gray-800 pb-2">Admission</h2>
+                        <div class="space-y-2 text-lg font-light">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">General Admission</span>
+                                <span>$15</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Students / Seniors</span>
+                                <span>$10</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Members</span>
+                                <span>Free</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Children (under 12)</span>
+                                <span>Free</span>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-sm text-gray-500 italic">Tickets can be purchased at the door or online.</p>
+                    </section>
+
+                    <!-- Accessibility -->
+                    <section>
+                        <h2 class="text-2xl font-serif mb-6 border-b border-gray-200 dark:border-gray-800 pb-2">Accessibility</h2>
+                        <p class="text-gray-600 dark:text-gray-300 font-light leading-relaxed">
+                            The gallery is fully wheelchair accessible. Elevators are located on all floors. Large-print exhibition guides are available at the front desk. Service animals are welcome.
+                        </p>
+                    </section>
+                </div>
+
+                <!-- Location / Map Column -->
+                <div class="h-full min-h-[400px]">
+                    <h2 class="text-2xl font-serif mb-6 border-b border-gray-200 dark:border-gray-800 pb-2">Location</h2>
+                    <address class="not-italic text-lg font-light mb-8 text-gray-600 dark:text-gray-300">
+                        123 Gallery Row<br>
+                        Cultural District<br>
+                        New York, NY 10012
+                    </address>
+                    
+                    <!-- Map Placeholder -->
+                    <div class="w-full h-[400px] bg-gray-200 dark:bg-gray-800 relative overflow-hidden grayscale">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.2327506692945!2d-74.00806448459427!3d40.7226689793311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598f988156a9%3A0xd54629bdf9d61d68!2sSoHo%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1634567890123!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/main.js"></script>
+    <script>
+    (function () {
+      // Initialize theme from localStorage
+      const savedTheme = localStorage.getItem('color-theme');
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+
+      // MENU TOGGLE (capture phase)
+      document.addEventListener(
+        "click",
+        function (e) {
+          const toggle = e.target.closest("[data-menu-toggle]");
+          if (!toggle) return;
+
+          const menu = document.querySelector("[data-mobile-menu]");
+          if (!menu) return;
+
+          e.preventDefault();
+          e.stopPropagation();
+          menu.classList.toggle("open");
+        },
+        true
+      );
+
+      // THEME TOGGLE (capture phase - works even if button loads later)
+      document.addEventListener(
+        "click",
+        function (e) {
+          const themeBtn = e.target.closest("[data-theme-toggle]");
+          if (!themeBtn) return;
+
+          e.preventDefault();
+          e.stopPropagation();
+          
+          document.documentElement.classList.toggle("dark");
+          const isDark = document.documentElement.classList.contains('dark');
+          localStorage.setItem('color-theme', isDark ? 'dark' : 'light');
+          
+          // Update icon
+          if (isDark) {
+            themeBtn.textContent = '☀️';
+          } else {
+            themeBtn.textContent = '🌙';
+          }
+        },
+        true
+      );
+
+      // Update theme icon when navbar loads
+      function updateThemeIcon() {
+        const themeBtn = document.querySelector("[data-theme-toggle]");
+        if (themeBtn) {
+          if (document.documentElement.classList.contains('dark')) {
+            themeBtn.textContent = '☀️';
+          } else {
+            themeBtn.textContent = '🌙';
+          }
+        } else {
+          // Retry if navbar not loaded yet
+          setTimeout(updateThemeIcon, 100);
+        }
+      }
+      updateThemeIcon();
+    })();
+    </script>
+</body>
+</html>

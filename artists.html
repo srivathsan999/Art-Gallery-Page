@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <title>Artists | Art Gallery</title>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'gallery-black': '#121212',
+                        'gallery-white': '#fafafa',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="assets/js/theme-toggle.js"></script>
+</head>
+<body class="bg-gallery-white dark:bg-gallery-black text-gray-900 dark:text-gray-100 transition-colors duration-300 antialiased">
+
+    <div id="navbar-placeholder"></div>
+
+    <main class="pt-32 pb-24 min-h-screen">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <header class="mb-20">
+                <h1 class="text-5xl md:text-7xl font-serif mb-6 text-gray-900 dark:text-white">Artists</h1>
+                <p class="text-lg font-light text-gray-600 dark:text-gray-400 max-w-2xl">
+                    Representing a diverse group of contemporary artists challenging the boundaries of medium and form.
+                </p>
+            </header>
+
+            <!-- Artists Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+                
+                <!-- Artist 1 -->
+                <a href="#" class="group block">
+                    <div class="aspect-[3/4] overflow-hidden mb-4 bg-gray-100 dark:bg-gray-900">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop" alt="Marcus Thorne" class="w-full h-full object-cover transition-all duration-500 grayscale group-hover:grayscale-0 group-hover:scale-105">
+                    </div>
+                    <h3 class="text-2xl font-serif text-gray-900 dark:text-white">Marcus Thorne</h3>
+                    <p class="text-sm text-gray-500 uppercase tracking-widest mt-1">Sculpture</p>
+                </a>
+
+                <!-- Artist 2 -->
+                <a href="#" class="group block">
+                    <div class="aspect-[3/4] overflow-hidden mb-4 bg-gray-100 dark:bg-gray-900">
+                        <img src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?q=80&w=2070&auto=format&fit=crop" alt="Elena Vance" class="w-full h-full object-cover transition-all duration-500 grayscale group-hover:grayscale-0 group-hover:scale-105">
+                    </div>
+                    <h3 class="text-2xl font-serif text-gray-900 dark:text-white">Elena Vance</h3>
+                    <p class="text-sm text-gray-500 uppercase tracking-widest mt-1">Installation</p>
+                </a>
+
+                <!-- Artist 3 -->
+                <a href="#" class="group block">
+                    <div class="aspect-[3/4] overflow-hidden mb-4 bg-gray-100 dark:bg-gray-900">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop" alt="Sarah Jenkins" class="w-full h-full object-cover transition-all duration-500 grayscale group-hover:grayscale-0 group-hover:scale-105">
+                    </div>
+                    <h3 class="text-2xl font-serif text-gray-900 dark:text-white">Sarah Jenkins</h3>
+                    <p class="text-sm text-gray-500 uppercase tracking-widest mt-1">Photography</p>
+                </a>
+
+                <!-- Artist 4 -->
+                <a href="#" class="group block">
+                    <div class="aspect-[3/4] overflow-hidden mb-4 bg-gray-100 dark:bg-gray-900">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1887&auto=format&fit=crop" alt="David Chen" class="w-full h-full object-cover transition-all duration-500 grayscale group-hover:grayscale-0 group-hover:scale-105">
+                    </div>
+                    <h3 class="text-2xl font-serif text-gray-900 dark:text-white">David Chen</h3>
+                    <p class="text-sm text-gray-500 uppercase tracking-widest mt-1">Oil on Canvas</p>
+                </a>
+
+                <!-- Artist 5 -->
+                <a href="#" class="group block">
+                    <div class="aspect-[3/4] overflow-hidden mb-4 bg-gray-100 dark:bg-gray-900">
+                        <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=1887&auto=format&fit=crop" alt="Amara Okafor" class="w-full h-full object-cover transition-all duration-500 grayscale group-hover:grayscale-0 group-hover:scale-105">
+                    </div>
+                    <h3 class="text-2xl font-serif text-gray-900 dark:text-white">Amara Okafor</h3>
+                    <p class="text-sm text-gray-500 uppercase tracking-widest mt-1">Mixed Media</p>
+                </a>
+
+                <!-- Artist 6 -->
+                <a href="#" class="group block">
+                    <div class="aspect-[3/4] overflow-hidden mb-4 bg-gray-100 dark:bg-gray-900">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop" alt="Julian West" class="w-full h-full object-cover transition-all duration-500 grayscale group-hover:grayscale-0 group-hover:scale-105">
+                    </div>
+                    <h3 class="text-2xl font-serif text-gray-900 dark:text-white">Julian West</h3>
+                    <p class="text-sm text-gray-500 uppercase tracking-widest mt-1">Digital</p>
+                </a>
+
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/main.js"></script>
+    <script>
+    (function () {
+      // Initialize theme from localStorage
+      const savedTheme = localStorage.getItem('color-theme');
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+
+      // MENU TOGGLE (capture phase)
+      document.addEventListener(
+        "click",
+        function (e) {
+          const toggle = e.target.closest("[data-menu-toggle]");
+          if (!toggle) return;
+
+          const menu = document.querySelector("[data-mobile-menu]");
+          if (!menu) return;
+
+          e.preventDefault();
+          e.stopPropagation();
+          menu.classList.toggle("open");
+        },
+        true
+      );
+
+      // THEME TOGGLE (capture phase - works even if button loads later)
+      document.addEventListener(
+        "click",
+        function (e) {
+          const themeBtn = e.target.closest("[data-theme-toggle]");
+          if (!themeBtn) return;
+
+          e.preventDefault();
+          e.stopPropagation();
+          
+          document.documentElement.classList.toggle("dark");
+          const isDark = document.documentElement.classList.contains('dark');
+          localStorage.setItem('color-theme', isDark ? 'dark' : 'light');
+          
+          // Update icon
+          if (isDark) {
+            themeBtn.textContent = '☀️';
+          } else {
+            themeBtn.textContent = '🌙';
+          }
+        },
+        true
+      );
+
+      // Update theme icon when navbar loads
+      function updateThemeIcon() {
+        const themeBtn = document.querySelector("[data-theme-toggle]");
+        if (themeBtn) {
+          if (document.documentElement.classList.contains('dark')) {
+            themeBtn.textContent = '☀️';
+          } else {
+            themeBtn.textContent = '🌙';
+          }
+        } else {
+          // Retry if navbar not loaded yet
+          setTimeout(updateThemeIcon, 100);
+        }
+      }
+      updateThemeIcon();
+    })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* Base Styles */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Utilities not covered by CDN default config or specific overrides */
+.glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.dark .glass {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Neomorphism for buttons (Micro interactions only) */
+.neo-btn {
+    box-shadow: 5px 5px 10px #d1d1d1, -5px -5px 10px #ffffff;
+}
+.dark .neo-btn {
+    box-shadow: 5px 5px 10px #0b0b0b, -5px -5px 10px #252525;
+}
+
+.neo-btn:active {
+    box-shadow: inset 5px 5px 10px #d1d1d1, inset -5px -5px 10px #ffffff;
+}
+.dark .neo-btn:active {
+    box-shadow: inset 5px 5px 10px #0b0b0b, inset -5px -5px 10px #252525;
+}
+
+/* Navbar Styles */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1000;
+}
+
+.dark .site-header {
+  background: #121212;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+[data-menu-toggle] {
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+[data-theme-toggle] {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.signup-btn {
+  padding: 6px 12px;
+  border: 1px solid #000;
+  text-decoration: none;
+}
+
+.dark .signup-btn {
+  border-color: #fff;
+}
+
+[data-mobile-menu] {
+  display: none;
+  flex-direction: column;
+  background: white;
+  padding: 16px;
+  gap: 12px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark [data-mobile-menu] {
+  background: #121212;
+}
+
+[data-mobile-menu].open {
+  display: flex;
+}
+
+[data-mobile-menu] a {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  display: block;
+}
+
+.dark [data-mobile-menu] a {
+  border-bottom-color: #333;
+}
+
+@media (min-width: 1025px) {
+  [data-menu-toggle] {
+    display: none;
+  }
+
+  [data-mobile-menu] {
+    display: flex !important;
+    flex-direction: row;
+    gap: 24px;
+    position: static !important;
+    width: auto !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  [data-mobile-menu] a {
+    padding: 0 !important;
+    border-bottom: none !important;
+    width: auto !important;
+  }
+
+  .mobile-signup {
+    display: none;
+  }
+}

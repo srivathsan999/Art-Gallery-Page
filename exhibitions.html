@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <title>Exhibitions | Art Gallery</title>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'gallery-black': '#121212',
+                        'gallery-white': '#fafafa',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="assets/js/theme-toggle.js"></script>
+</head>
+<body class="bg-gallery-white dark:bg-gallery-black text-gray-900 dark:text-gray-100 transition-colors duration-300 antialiased">
+
+    <div id="navbar-placeholder"></div>
+
+    <main class="pt-32 pb-24 min-h-screen">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <!-- Header -->
+            <header class="mb-16">
+                <h1 class="text-5xl md:text-7xl font-serif mb-8 text-gray-900 dark:text-white">Exhibitions</h1>
+            </header>
+
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
+                
+                <!-- Exh 1 -->
+                <article class="group cursor-pointer exhibition-item" 
+                    data-title="Silence & Structure"
+                    data-location="Main Gallery"
+                    data-date="Sep 10 — Oct 30"
+                    data-image="https://images.unsplash.com/photo-1545989253-02cc26577f88?q=80&w=2070&auto=format&fit=crop"
+                    data-description="An exploration of minimalist forms in contemporary sculpture. This exhibition features works by Marcus Thorne that investigate the tension between organic decay and geometric permanence. The pieces use locally sourced materials to ground the work in its environment."
+                    data-curator="Elena Vance"
+                    data-artists="Marcus Thorne">
+                    <div class="block">
+                        <div class="overflow-hidden aspect-[16/10] mb-6">
+                            <img src="https://images.unsplash.com/photo-1545989253-02cc26577f88?q=80&w=2070&auto=format&fit=crop" alt="Silence & Structure" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0">
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-baseline justify-between">
+                            <div>
+                                <h2 class="text-3xl font-serif text-gray-900 dark:text-white mb-2 group-hover:underline decoration-1 underline-offset-4">Silence & Structure</h2>
+                                <p class="text-sm text-gray-500 uppercase tracking-wide">Main Gallery</p>
+                            </div>
+                            <div class="mt-2 md:mt-0 text-right">
+                                <p class="text-gray-600 dark:text-gray-400 font-light">Sep 10 — Oct 30</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Exh 2 -->
+                <article class="group cursor-pointer exhibition-item"
+                    data-title="Forms of Light"
+                    data-location="East Wing"
+                    data-date="Aug 15 — Oct 30"
+                    data-image="https://images.unsplash.com/photo-1515405295579-ba7b45403062?q=80&w=2000&auto=format&fit=crop"
+                    data-description="A luminous journey through contemporary photography and installation art. This exhibition explores how light shapes our perception of space and form, featuring works that blur the boundaries between the tangible and the ethereal."
+                    data-curator="James Chen"
+                    data-artists="Elena Vance, Sarah Jenkins">
+                    <div class="block">
+                        <div class="overflow-hidden aspect-[16/10] mb-6">
+                            <img src="https://images.unsplash.com/photo-1515405295579-ba7b45403062?q=80&w=2000&auto=format&fit=crop" alt="Forms of Light" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0">
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-baseline justify-between">
+                            <div>
+                                <h2 class="text-3xl font-serif text-gray-900 dark:text-white mb-2 group-hover:underline decoration-1 underline-offset-4">Forms of Light</h2>
+                                <p class="text-sm text-gray-500 uppercase tracking-wide">East Wing</p>
+                            </div>
+                            <div class="mt-2 md:mt-0 text-right">
+                                <p class="text-gray-600 dark:text-gray-400 font-light">Aug 15 — Oct 30</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Exh 3 -->
+                <article class="group cursor-pointer exhibition-item"
+                    data-title="The Void"
+                    data-location="Project Room"
+                    data-date="Oct 01 — Nov 15"
+                    data-image="https://images.unsplash.com/photo-1561214115-f2f134cc4912?q=80&w=1909&auto=format&fit=crop"
+                    data-description="An immersive installation exploring negative space and absence. This exhibition challenges viewers to reconsider what constitutes presence in contemporary art, featuring large-scale works that engage with emptiness as a medium."
+                    data-curator="Elena Vance"
+                    data-artists="David Chen">
+                    <div class="block">
+                        <div class="overflow-hidden aspect-[16/10] mb-6">
+                            <img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?q=80&w=1909&auto=format&fit=crop" alt="The Void" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0">
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-baseline justify-between">
+                            <div>
+                                <h2 class="text-3xl font-serif text-gray-900 dark:text-white mb-2 group-hover:underline decoration-1 underline-offset-4">The Void</h2>
+                                <p class="text-sm text-gray-500 uppercase tracking-wide">Project Room</p>
+                            </div>
+                            <div class="mt-2 md:mt-0 text-right">
+                                <p class="text-gray-600 dark:text-gray-400 font-light">Oct 01 — Nov 15</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Exh 5 -->
+                <article class="group cursor-pointer exhibition-item"
+                    data-title="Ephemeral States"
+                    data-location="South Gallery"
+                    data-date="Nov 01 — Jan 15"
+                    data-image="https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=2000&auto=format&fit=crop"
+                    data-description="A meditation on transience and transformation. This exhibition features works that explore the fleeting nature of existence, using materials that change over time and installations that evolve with the viewer's presence."
+                    data-curator="Sarah Mitchell"
+                    data-artists="Amara Okafor, Julian West">
+                    <div class="block">
+                        <div class="overflow-hidden aspect-[16/10] mb-6">
+                            <img src="https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=2000&auto=format&fit=crop" alt="Ephemeral States" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0">
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-baseline justify-between">
+                            <div>
+                                <h2 class="text-3xl font-serif text-gray-900 dark:text-white mb-2 group-hover:underline decoration-1 underline-offset-4">Ephemeral States</h2>
+                                <p class="text-sm text-gray-500 uppercase tracking-wide">South Gallery</p>
+                            </div>
+                            <div class="mt-2 md:mt-0 text-right">
+                                <p class="text-gray-600 dark:text-gray-400 font-light">Nov 01 — Jan 15</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Exh 6 -->
+                <article class="group cursor-pointer exhibition-item"
+                    data-title="Chromatic Fields"
+                    data-location="Main Hall"
+                    data-date="Dec 10 — Feb 28"
+                    data-image="https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?q=80&w=1972&auto=format&fit=crop"
+                    data-description="An exploration of color as both medium and message. This vibrant exhibition showcases contemporary paintings and digital works that investigate the psychological and emotional impact of color, creating immersive environments that transform the gallery space."
+                    data-curator="James Chen"
+                    data-artists="David Chen, Elena Vance">
+                    <div class="block">
+                        <div class="overflow-hidden aspect-[16/10] mb-6">
+                            <img src="https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?q=80&w=1972&auto=format&fit=crop" alt="Chromatic Fields" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0">
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-baseline justify-between">
+                            <div>
+                                <h2 class="text-3xl font-serif text-gray-900 dark:text-white mb-2 group-hover:underline decoration-1 underline-offset-4">Chromatic Fields</h2>
+                                <p class="text-sm text-gray-500 uppercase tracking-wide">Main Hall</p>
+                            </div>
+                            <div class="mt-2 md:mt-0 text-right">
+                                <p class="text-gray-600 dark:text-gray-400 font-light">Dec 10 — Feb 28</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Exh 7 -->
+                <article class="group cursor-pointer exhibition-item"
+                    data-title="Urban Artifacts"
+                    data-location="Project Room"
+                    data-date="Jan 05 — Mar 20"
+                    data-image="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=2070&auto=format&fit=crop"
+                    data-description="A collection of found objects and mixed media works that examine the relationship between urban environments and human experience. This exhibition transforms everyday materials into contemplative artworks that question our relationship with the city."
+                    data-curator="Elena Vance"
+                    data-artists="Sarah Jenkins, Julian West">
+                    <div class="block">
+                        <div class="overflow-hidden aspect-[16/10] mb-6">
+                            <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=2070&auto=format&fit=crop" alt="Urban Artifacts" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0">
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-baseline justify-between">
+                            <div>
+                                <h2 class="text-3xl font-serif text-gray-900 dark:text-white mb-2 group-hover:underline decoration-1 underline-offset-4">Urban Artifacts</h2>
+                                <p class="text-sm text-gray-500 uppercase tracking-wide">Project Room</p>
+                            </div>
+                            <div class="mt-2 md:mt-0 text-right">
+                                <p class="text-gray-600 dark:text-gray-400 font-light">Jan 05 — Mar 20</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Exhibition Detail Modal -->
+    <div id="exhibition-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm">
+        <div class="relative w-full max-w-6xl mx-6 max-h-[90vh] overflow-y-auto bg-white dark:bg-black border border-gray-200 dark:border-gray-800">
+            <!-- Close Button -->
+            <button id="close-modal" class="absolute top-6 right-6 z-10 p-2 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <!-- Modal Content -->
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+                <!-- Image Section -->
+                <div class="lg:sticky lg:top-0 lg:h-screen flex items-center bg-gray-50 dark:bg-gray-900">
+                    <img id="modal-image" src="" alt="" class="w-full h-auto max-h-screen object-contain">
+                </div>
+
+                <!-- Details Section -->
+                <div class="p-8 md:p-12">
+                    <h2 id="modal-title" class="text-4xl md:text-5xl font-serif text-gray-900 dark:text-white mb-4"></h2>
+                    
+                    <div class="space-y-6 mb-8">
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-gray-500 block mb-2">Location</span>
+                            <p id="modal-location" class="text-lg text-gray-900 dark:text-white"></p>
+                        </div>
+                        
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-gray-500 block mb-2">Dates</span>
+                            <p id="modal-date" class="text-lg text-gray-900 dark:text-white"></p>
+                        </div>
+                        
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-gray-500 block mb-2">Curated by</span>
+                            <p id="modal-curator" class="text-lg text-gray-900 dark:text-white"></p>
+                        </div>
+                        
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-gray-500 block mb-2">Featured Artists</span>
+                            <p id="modal-artists" class="text-lg text-gray-900 dark:text-white"></p>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-gray-200 dark:border-gray-800 pt-8">
+                        <span class="text-xs uppercase tracking-widest text-gray-500 block mb-4">About</span>
+                        <p id="modal-description" class="text-base leading-relaxed text-gray-600 dark:text-gray-300 mb-8"></p>
+                        
+                        <a href="contact.html" class="inline-block px-8 py-3 border border-gray-900 dark:border-white text-gray-900 dark:text-white text-sm uppercase tracking-widest hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300">
+                            Inquire About This Exhibition
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Exhibition Modal Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const exhibitionItems = document.querySelectorAll('.exhibition-item');
+            const modal = document.getElementById('exhibition-modal');
+            const closeModal = document.getElementById('close-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalLocation = document.getElementById('modal-location');
+            const modalDate = document.getElementById('modal-date');
+            const modalImage = document.getElementById('modal-image');
+            const modalDescription = document.getElementById('modal-description');
+            const modalCurator = document.getElementById('modal-curator');
+            const modalArtists = document.getElementById('modal-artists');
+
+            // Open modal on exhibition click
+            exhibitionItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    modalTitle.textContent = this.dataset.title;
+                    modalLocation.textContent = this.dataset.location;
+                    modalDate.textContent = this.dataset.date;
+                    modalImage.src = this.dataset.image;
+                    modalImage.alt = this.dataset.title;
+                    modalDescription.textContent = this.dataset.description;
+                    modalCurator.textContent = this.dataset.curator;
+                    modalArtists.textContent = this.dataset.artists;
+                    
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            // Close modal
+            function closeModalFunc() {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = '';
+            }
+
+            closeModal.addEventListener('click', closeModalFunc);
+            
+            // Close on background click
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModalFunc();
+                }
+            });
+
+            // Close on Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                    closeModalFunc();
+                }
+            });
+        });
+    </script>
+    <script>
+    (function () {
+      // Initialize theme from localStorage
+      const savedTheme = localStorage.getItem('color-theme');
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+
+      // MENU TOGGLE (capture phase)
+      document.addEventListener(
+        "click",
+        function (e) {
+          const toggle = e.target.closest("[data-menu-toggle]");
+          if (!toggle) return;
+
+          const menu = document.querySelector("[data-mobile-menu]");
+          if (!menu) return;
+
+          e.preventDefault();
+          e.stopPropagation();
+          menu.classList.toggle("open");
+        },
+        true
+      );
+
+      // THEME TOGGLE (capture phase - works even if button loads later)
+      document.addEventListener(
+        "click",
+        function (e) {
+          const themeBtn = e.target.closest("[data-theme-toggle]");
+          if (!themeBtn) return;
+
+          e.preventDefault();
+          e.stopPropagation();
+          
+          document.documentElement.classList.toggle("dark");
+          const isDark = document.documentElement.classList.contains('dark');
+          localStorage.setItem('color-theme', isDark ? 'dark' : 'light');
+          
+          // Update icon
+          if (isDark) {
+            themeBtn.textContent = '☀️';
+          } else {
+            themeBtn.textContent = '🌙';
+          }
+        },
+        true
+      );
+
+      // Update theme icon when navbar loads
+      function updateThemeIcon() {
+        const themeBtn = document.querySelector("[data-theme-toggle]");
+        if (themeBtn) {
+          if (document.documentElement.classList.contains('dark')) {
+            themeBtn.textContent = '☀️';
+          } else {
+            themeBtn.textContent = '🌙';
+          }
+        } else {
+          // Retry if navbar not loaded yet
+          setTimeout(updateThemeIcon, 100);
+        }
+      }
+      updateThemeIcon();
+    })();
+    </script>
+</body>
+</html>

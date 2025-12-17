@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <title>Silence & Structure | Art Gallery</title>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'gallery-black': '#121212',
+                        'gallery-white': '#fafafa',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="assets/js/theme-toggle.js"></script>
+</head>
+<body class="bg-gallery-white dark:bg-gallery-black text-gray-900 dark:text-gray-100 transition-colors duration-300 antialiased">
+
+    <div id="navbar-placeholder"></div>
+
+    <main class="pt-24 pb-24 min-h-screen">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <!-- Breadcrumb / Back -->
+            <div class="mb-12">
+                <a href="exhibitions.html" class="text-xs uppercase tracking-widest text-gray-500 hover:text-black dark:hover:text-white transition-colors">
+                    &larr; Back to Exhibitions
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
+                
+                <!-- Artwork Image (Dominant) -->
+                <div class="lg:col-span-8">
+                    <div class="w-full bg-gray-50 dark:bg-gray-900">
+                        <img src="https://images.unsplash.com/photo-1545989253-02cc26577f88?q=80&w=2070&auto=format&fit=crop" alt="Silence No. 4" class="w-full h-auto object-contain max-h-[85vh]">
+                    </div>
+                </div>
+
+                <!-- Metadata (Sticky on Desktop) -->
+                <div class="lg:col-span-4 lg:sticky lg:top-32 h-fit">
+                    <h1 class="text-4xl md:text-5xl font-serif text-gray-900 dark:text-white mb-2">Silence No. 4</h1>
+                    <a href="artists.html" class="block text-xl text-gray-600 dark:text-gray-300 mb-8 hover:underline decoration-1 underline-offset-4">
+                        Marcus Thorne
+                    </a>
+
+                    <div class="space-y-4 text-sm font-light text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800 pt-8 mb-12">
+                        <div class="grid grid-cols-3 gap-4">
+                            <span class="uppercase tracking-widest text-xs text-gray-400 dark:text-gray-500">Year</span>
+                            <span class="col-span-2">2023</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4">
+                            <span class="uppercase tracking-widest text-xs text-gray-400 dark:text-gray-500">Medium</span>
+                            <span class="col-span-2">Bronze and Limestone</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4">
+                            <span class="uppercase tracking-widest text-xs text-gray-400 dark:text-gray-500">Dimensions</span>
+                            <span class="col-span-2">120 × 80 × 45 cm</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4">
+                            <span class="uppercase tracking-widest text-xs text-gray-400 dark:text-gray-500">Location</span>
+                            <span class="col-span-2">Main Gallery, Floor 1</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <p class="text-base leading-relaxed text-gray-700 dark:text-gray-300">
+                            Part of the "Silence & Structure" series, this piece investigates the tension between organic decay and geometric permanence. Thorne uses locally sourced limestone to ground the work in its environment.
+                        </p>
+                        
+                        <a href="contact.html" class="inline-block w-full text-center px-8 py-4 border border-gray-900 dark:border-white text-gray-900 dark:text-white text-xs uppercase tracking-[0.2em] hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300">
+                            Inquire about this work
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/main.js"></script>
+    <script>
+    (function () {
+      // Initialize theme from localStorage
+      const savedTheme = localStorage.getItem('color-theme');
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+
+      // MENU TOGGLE (capture phase)
+      document.addEventListener(
+        "click",
+        function (e) {
+          const toggle = e.target.closest("[data-menu-toggle]");
+          if (!toggle) return;
+
+          const menu = document.querySelector("[data-mobile-menu]");
+          if (!menu) return;
+
+          e.preventDefault();
+          e.stopPropagation();
+          menu.classList.toggle("open");
+        },
+        true
+      );
+
+      // THEME TOGGLE (capture phase - works even if button loads later)
+      document.addEventListener(
+        "click",
+        function (e) {
+          const themeBtn = e.target.closest("[data-theme-toggle]");
+          if (!themeBtn) return;
+
+          e.preventDefault();
+          e.stopPropagation();
+          
+          document.documentElement.classList.toggle("dark");
+          const isDark = document.documentElement.classList.contains('dark');
+          localStorage.setItem('color-theme', isDark ? 'dark' : 'light');
+          
+          // Update icon
+          if (isDark) {
+            themeBtn.textContent = '☀️';
+          } else {
+            themeBtn.textContent = '🌙';
+          }
+        },
+        true
+      );
+
+      // Update theme icon when navbar loads
+      function updateThemeIcon() {
+        const themeBtn = document.querySelector("[data-theme-toggle]");
+        if (themeBtn) {
+          if (document.documentElement.classList.contains('dark')) {
+            themeBtn.textContent = '☀️';
+          } else {
+            themeBtn.textContent = '🌙';
+          }
+        } else {
+          // Retry if navbar not loaded yet
+          setTimeout(updateThemeIcon, 100);
+        }
+      }
+      updateThemeIcon();
+    })();
+    </script>
+</body>
+</html>

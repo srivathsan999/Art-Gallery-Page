@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Art Gallery</title>
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'gallery-black': '#121212',
+                        'gallery-white': '#fafafa',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="assets/js/theme-toggle.js"></script>
+</head>
+<body class="h-screen w-full overflow-hidden relative bg-gray-100 dark:bg-black font-sans">
+
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1545989253-02cc26577f88?q=80&w=2070&auto=format&fit=crop" alt="Background" class="w-full h-full object-cover opacity-80 dark:opacity-40 grayscale">
+        <div class="absolute inset-0 bg-white/20 dark:bg-black/50 backdrop-blur-sm"></div>
+    </div>
+
+    <!-- Centered Content -->
+    <div class="relative z-10 flex flex-col items-center justify-center h-full px-4">
+        
+        <!-- Logo -->
+        <a href="index.html" class="mb-8 flex items-center gap-3 text-2xl font-light tracking-[0.3em] uppercase text-gray-900 dark:text-white drop-shadow-md">
+            <img src="assets/img/logo.svg" alt="Art Gallery Logo" class="w-10 h-10">
+            Art Gallery
+        </a>
+
+        <!-- Glass Card -->
+        <div class="glass w-full max-w-md p-8 md:p-12 rounded-lg shadow-2xl">
+            <h2 class="text-3xl font-serif text-gray-900 dark:text-white mb-2 text-center">Welcome Back</h2>
+            <p class="text-sm text-gray-600 dark:text-gray-300 text-center mb-8 font-light">Enter your credentials to access your collection.</p>
+
+            <form class="space-y-6">
+                <div class="space-y-1">
+                    <label for="email" class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Email</label>
+                    <input type="email" id="email" class="w-full bg-white/50 dark:bg-black/50 border border-gray-200 dark:border-gray-700 rounded p-3 text-gray-900 dark:text-white focus:outline-none focus:border-black dark:focus:border-white transition-colors">
+                </div>
+
+                <div class="space-y-1">
+                    <div class="flex justify-between">
+                        <label for="password" class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Password</label>
+                        <a href="#" class="text-xs text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white">Forgot?</a>
+                    </div>
+                    <input type="password" id="password" class="w-full bg-white/50 dark:bg-black/50 border border-gray-200 dark:border-gray-700 rounded p-3 text-gray-900 dark:text-white focus:outline-none focus:border-black dark:focus:border-white transition-colors">
+                </div>
+
+                <button type="submit" class="w-full neo-btn py-3 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white uppercase text-xs tracking-widest font-medium transition-transform active:scale-95 mt-4">
+                    Sign In
+                </button>
+            </form>
+
+            <div class="mt-8 text-center">
+                <p class="text-sm text-gray-600 dark:text-gray-400 font-light">
+                    Not a member? <a href="signup.html" class="underline underline-offset-4 hover:text-black dark:hover:text-white transition-colors">Apply for membership</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+    (function () {
+      // Initialize theme from localStorage
+      const savedTheme = localStorage.getItem('color-theme');
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+
+      // MENU TOGGLE (capture phase)
+      document.addEventListener(
+        "click",
+        function (e) {
+          const toggle = e.target.closest("[data-menu-toggle]");
+          if (!toggle) return;
+
+          const menu = document.querySelector("[data-mobile-menu]");
+          if (!menu) return;
+
+          e.preventDefault();
+          e.stopPropagation();
+          menu.classList.toggle("open");
+        },
+        true
+      );
+
+      // THEME TOGGLE (capture phase - works even if button loads later)
+      document.addEventListener(
+        "click",
+        function (e) {
+          const themeBtn = e.target.closest("[data-theme-toggle]");
+          if (!themeBtn) return;
+
+          e.preventDefault();
+          e.stopPropagation();
+          
+          document.documentElement.classList.toggle("dark");
+          const isDark = document.documentElement.classList.contains('dark');
+          localStorage.setItem('color-theme', isDark ? 'dark' : 'light');
+          
+          // Update icon
+          if (isDark) {
+            themeBtn.textContent = '☀️';
+          } else {
+            themeBtn.textContent = '🌙';
+          }
+        },
+        true
+      );
+
+      // Update theme icon when navbar loads
+      function updateThemeIcon() {
+        const themeBtn = document.querySelector("[data-theme-toggle]");
+        if (themeBtn) {
+          if (document.documentElement.classList.contains('dark')) {
+            themeBtn.textContent = '☀️';
+          } else {
+            themeBtn.textContent = '🌙';
+          }
+        } else {
+          // Retry if navbar not loaded yet
+          setTimeout(updateThemeIcon, 100);
+        }
+      }
+      updateThemeIcon();
+    })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <title>About | Art Gallery</title>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'gallery-black': '#121212',
+                        'gallery-white': '#fafafa',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="assets/js/theme-toggle.js"></script>
+</head>
+<body class="bg-gallery-white dark:bg-gallery-black text-gray-900 dark:text-gray-100 transition-colors duration-300 antialiased selection:bg-gray-200 dark:selection:bg-gray-800">
+
+    <div id="navbar-placeholder"></div>
+
+    <main class="pt-32 pb-24 min-h-screen">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <!-- Header -->
+            <header class="mb-24 text-center max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-serif mb-8 text-gray-900 dark:text-white leading-tight">
+                    Curating the dialogue between <br> <span class="italic">artist</span> and <span class="italic">observer</span>.
+                </h1>
+                <p class="text-lg font-light text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                    Founded in 2010, Art Gallery has established itself as a leading voice in contemporary art, dedicated to supporting artists who challenge conventions and explore the depths of human experience.
+                </p>
+            </header>
+
+            <!-- Mission Section -->
+            <section class="mb-32">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div class="order-2 md:order-1 space-y-6">
+                        <span class="block text-xs uppercase tracking-widest text-gray-500 mb-4">Our Mission</span>
+                        <h2 class="text-3xl md:text-4xl font-serif text-gray-900 dark:text-white mb-6">A Space for Art to Breathe</h2>
+                        <p class="text-lg font-light text-gray-600 dark:text-gray-300 leading-relaxed">
+                            We believe in the power of quiet observation. Our space is designed not just to house art, but to give it room to breathe. Every exhibition is curated with intention, creating a dialogue between the work and the viewer.
+                        </p>
+                        <p class="text-lg font-light text-gray-600 dark:text-gray-300 leading-relaxed">
+                            We are committed to supporting artists who challenge conventions and explore the depths of human experience through rigorous material and conceptual practice.
+                        </p>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1577720580479-7d839d829c73?q=80&w=1974&auto=format&fit=crop" alt="Gallery Interior" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- The Space Section -->
+            <section class="mb-32">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=2058&auto=format&fit=crop" alt="Architecture Detail" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <span class="block text-xs uppercase tracking-widest text-gray-500 mb-4">The Space</span>
+                        <h2 class="text-3xl md:text-4xl font-serif text-gray-900 dark:text-white mb-6">Designed for Contemplation</h2>
+                        <p class="text-lg font-light text-gray-600 dark:text-gray-300 leading-relaxed">
+                            Located in the historic Cultural District, our 5,000 square foot facility was renovated by award-winning architects to strip away the noise of the city. The result is a sanctuary of light and shadow, perfectly attuned to the needs of modern installations.
+                        </p>
+                        <p class="text-lg font-light text-gray-600 dark:text-gray-300 leading-relaxed">
+                            Natural light floods through floor-to-ceiling windows during the day, while carefully placed fixtures create intimate viewing experiences in the evening hours.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Values Section -->
+            <section class="mb-32 bg-gray-50 dark:bg-[#0a0a0a] py-24 -mx-6 px-6">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center mb-16">
+                        <span class="block text-xs uppercase tracking-widest text-gray-500 mb-4">Our Values</span>
+                        <h2 class="text-3xl md:text-4xl font-serif text-gray-900 dark:text-white">What Guides Us</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                        <div>
+                            <h3 class="text-xl font-serif text-gray-900 dark:text-white mb-4">Artist Support</h3>
+                            <p class="text-gray-600 dark:text-gray-300 font-light leading-relaxed">
+                                We provide a platform for emerging and established artists to showcase work that pushes boundaries and challenges perspectives.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-serif text-gray-900 dark:text-white mb-4">Accessibility</h3>
+                            <p class="text-gray-600 dark:text-gray-300 font-light leading-relaxed">
+                                Art should be accessible to all. We offer free admission and educational programs to make contemporary art approachable for everyone.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-serif text-gray-900 dark:text-white mb-4">Innovation</h3>
+                            <p class="text-gray-600 dark:text-gray-300 font-light leading-relaxed">
+                                We embrace new forms of expression and technology, constantly evolving to reflect the changing landscape of contemporary art.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- History Section -->
+            <section class="mb-32">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-5">
+                        <div class="aspect-[3/4] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?q=80&w=1974&auto=format&fit=crop" alt="Gallery History" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7">
+                        <span class="block text-xs uppercase tracking-widest text-gray-500 mb-4">Our Story</span>
+                        <h2 class="text-3xl md:text-4xl font-serif text-gray-900 dark:text-white mb-6">A Decade of Excellence</h2>
+                        <p class="text-lg font-light text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                            Since opening our doors in 2010, Art Gallery has hosted over 200 exhibitions featuring works from more than 500 artists worldwide. What began as a small space in a converted warehouse has grown into one of the city's most respected contemporary art venues.
+                        </p>
+                        <p class="text-lg font-light text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                            Our commitment to quality and innovation has earned recognition from critics and collectors alike, while our educational programs have introduced thousands of visitors to the transformative power of contemporary art.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team Section -->
+            <section class="mb-32">
+                <div class="text-center mb-16">
+                    <span class="block text-xs uppercase tracking-widest text-gray-500 mb-4">Our Team</span>
+                    <h2 class="text-3xl md:text-4xl font-serif text-gray-900 dark:text-white">Curators & Directors</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="text-center">
+                        <div class="aspect-square overflow-hidden mb-6 max-w-xs mx-auto">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop" alt="Elena Vance" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                        </div>
+                        <h3 class="text-xl font-serif text-gray-900 dark:text-white mb-2">Elena Vance</h3>
+                        <p class="text-sm text-gray-500 uppercase tracking-wide mb-3">Director & Chief Curator</p>
+                        <p class="text-gray-600 dark:text-gray-300 font-light text-sm leading-relaxed">
+                            With over 15 years of experience, Elena brings a visionary approach to contemporary curation.
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        <div class="aspect-square overflow-hidden mb-6 max-w-xs mx-auto">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1887&auto=format&fit=crop" alt="James Chen" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                        </div>
+                        <h3 class="text-xl font-serif text-gray-900 dark:text-white mb-2">James Chen</h3>
+                        <p class="text-sm text-gray-500 uppercase tracking-wide mb-3">Associate Curator</p>
+                        <p class="text-gray-600 dark:text-gray-300 font-light text-sm leading-relaxed">
+                            Specializing in emerging artists and experimental media, James expands our artistic horizons.
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        <div class="aspect-square overflow-hidden mb-6 max-w-xs mx-auto">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop" alt="Sarah Mitchell" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                        </div>
+                        <h3 class="text-xl font-serif text-gray-900 dark:text-white mb-2">Sarah Mitchell</h3>
+                        <p class="text-sm text-gray-500 uppercase tracking-wide mb-3">Gallery Manager</p>
+                        <p class="text-gray-600 dark:text-gray-300 font-light text-sm leading-relaxed">
+                            Sarah ensures seamless operations and exceptional visitor experiences every day.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact CTA Section -->
+            <section class="border-t border-gray-200 dark:border-gray-800 pt-24">
+                <div class="text-center max-w-2xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-serif text-gray-900 dark:text-white mb-6">Visit Us</h2>
+                    <p class="text-lg font-light text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+                        We welcome visitors, artists, and collectors to experience our space and engage with contemporary art in meaningful ways.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="visit.html" class="inline-block px-8 py-3 border border-gray-900 dark:border-white text-gray-900 dark:text-white text-sm uppercase tracking-widest hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300">
+                            Plan Your Visit
+                        </a>
+                        <a href="contact.html" class="inline-block px-8 py-3 border border-gray-200 dark:border-gray-800 hover:border-gray-900 dark:hover:border-white text-gray-900 dark:text-white text-sm uppercase tracking-widest transition-all duration-300">
+                            Get in Touch
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/main.js"></script>
+    <script>
+    (function () {
+      // Initialize theme from localStorage
+      const savedTheme = localStorage.getItem('color-theme');
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+
+      // MENU TOGGLE (capture phase)
+      document.addEventListener(
+        "click",
+        function (e) {
+          const toggle = e.target.closest("[data-menu-toggle]");
+          if (!toggle) return;
+
+          const menu = document.querySelector("[data-mobile-menu]");
+          if (!menu) return;
+
+          e.preventDefault();
+          e.stopPropagation();
+          menu.classList.toggle("open");
+        },
+        true
+      );
+
+      // THEME TOGGLE (capture phase - works even if button loads later)
+      document.addEventListener(
+        "click",
+        function (e) {
+          const themeBtn = e.target.closest("[data-theme-toggle]");
+          if (!themeBtn) return;
+
+          e.preventDefault();
+          e.stopPropagation();
+          
+          document.documentElement.classList.toggle("dark");
+          const isDark = document.documentElement.classList.contains('dark');
+          localStorage.setItem('color-theme', isDark ? 'dark' : 'light');
+          
+          // Update icon
+          if (isDark) {
+            themeBtn.textContent = '☀️';
+          } else {
+            themeBtn.textContent = '🌙';
+          }
+        },
+        true
+      );
+
+      // Update theme icon when navbar loads
+      function updateThemeIcon() {
+        const themeBtn = document.querySelector("[data-theme-toggle]");
+        if (themeBtn) {
+          if (document.documentElement.classList.contains('dark')) {
+            themeBtn.textContent = '☀️';
+          } else {
+            themeBtn.textContent = '🌙';
+          }
+        } else {
+          // Retry if navbar not loaded yet
+          setTimeout(updateThemeIcon, 100);
+        }
+      }
+      updateThemeIcon();
+    })();
+    </script>
+</body>
+</html>
