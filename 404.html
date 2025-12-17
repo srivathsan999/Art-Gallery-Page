@@ -66,11 +66,11 @@
         true
       );
 
-      // THEME TOGGLE (capture phase - works even if button loads later)
+      // THEME TOGGLE (capture phase - works with dynamically loaded navbar)
       document.addEventListener(
         "click",
         function (e) {
-          const themeBtn = e.target.closest("[data-theme-toggle]");
+          const themeBtn = e.target.closest("[data-theme-toggle], [data-theme-toggle-desktop]");
           if (!themeBtn) return;
 
           e.preventDefault();
@@ -80,31 +80,37 @@
           const isDark = document.documentElement.classList.contains('dark');
           localStorage.setItem('color-theme', isDark ? 'dark' : 'light');
           
-          // Update icon
-          if (isDark) {
-            themeBtn.textContent = '☀️';
-          } else {
-            themeBtn.textContent = '🌙';
-          }
+          // Update icon on both buttons
+          const allThemeBtns = document.querySelectorAll("[data-theme-toggle], [data-theme-toggle-desktop]");
+          allThemeBtns.forEach(btn => {
+            if (isDark) {
+              btn.textContent = '☀️';
+            } else {
+              btn.textContent = '🌙';
+            }
+          });
         },
         true
       );
 
-      // Update theme icon when navbar loads
-      function updateThemeIcon() {
-        const themeBtn = document.querySelector("[data-theme-toggle]");
-        if (themeBtn) {
-          if (document.documentElement.classList.contains('dark')) {
-            themeBtn.textContent = '☀️';
-          } else {
-            themeBtn.textContent = '🌙';
-          }
+      // Update theme icon on load (after navbar loads)
+      function updateThemeIconOnLoad() {
+        const themeBtns = document.querySelectorAll("[data-theme-toggle], [data-theme-toggle-desktop]");
+        if (themeBtns.length > 0) {
+          const isDark = document.documentElement.classList.contains('dark');
+          themeBtns.forEach(btn => {
+            if (isDark) {
+              btn.textContent = '☀️';
+            } else {
+              btn.textContent = '🌙';
+            }
+          });
         } else {
           // Retry if navbar not loaded yet
-          setTimeout(updateThemeIcon, 100);
+          setTimeout(updateThemeIconOnLoad, 100);
         }
       }
-      updateThemeIcon();
+      updateThemeIconOnLoad();
     })();
     </script>
 </body>

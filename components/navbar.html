@@ -10,17 +10,14 @@
       Art Gallery
     </a>
 
-    <!-- Right controls -->
-    <div class="nav-actions flex items-center gap-3">
+    <!-- Right controls (Mobile/Tablet) -->
+    <div class="nav-actions flex items-center gap-3 lg:hidden">
 
-      <!-- Theme Toggle -->
+      <!-- Theme Toggle (Mobile/Tablet) -->
       <button data-theme-toggle aria-label="Toggle theme" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors focus:outline-none text-gray-800 dark:text-gray-200 text-lg">🌙</button>
 
-      <!-- Sign Up -->
-      <a href="signup.html" class="signup-btn hidden lg:block text-sm uppercase tracking-wide text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors px-4 py-2 border border-gray-300 dark:border-gray-700 hover:border-gray-900 dark:hover:border-white">Sign Up</a>
-
       <!-- Hamburger -->
-      <button data-menu-toggle aria-label="Open menu" class="lg:hidden text-2xl bg-none border-none cursor-pointer text-gray-900 dark:text-white p-2">☰</button>
+      <button data-menu-toggle aria-label="Open menu" class="text-2xl bg-none border-none cursor-pointer text-gray-900 dark:text-white p-2">☰</button>
 
     </div>
 
@@ -32,6 +29,11 @@
       <a href="visit.html" class="text-sm uppercase tracking-wide text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">Visit</a>
       <a href="about.html" class="text-sm uppercase tracking-wide text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">About</a>
       <a href="contact.html" class="text-sm uppercase tracking-wide text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">Contact</a>
+      <!-- Desktop: Theme Toggle -->
+      <div class="desktop-theme-toggle hidden lg:flex items-center gap-3">
+        <button data-theme-toggle-desktop aria-label="Toggle theme" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors focus:outline-none text-gray-800 dark:text-gray-200 text-lg">🌙</button>
+      </div>
+      <!-- Mobile: Sign Up -->
       <a href="signup.html" class="mobile-signup text-sm uppercase tracking-wide text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">Sign Up</a>
     </nav>
 

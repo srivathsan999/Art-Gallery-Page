@@ -74,6 +74,10 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
   cursor: pointer;
   font-size: 18px;
+  position: relative;
+  z-index: 1001;
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .signup-btn {
@@ -123,6 +127,11 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
 
+  /* Hide mobile theme toggle in desktop view */
+  [data-theme-toggle] {
+    display: none !important;
+  }
+
   [data-mobile-menu] {
     display: flex !important;
     flex-direction: row;
@@ -132,6 +141,7 @@ h1, h2, h3, h4, h5, h6 {
     background: transparent !important;
     box-shadow: none !important;
     padding: 0 !important;
+    margin-left: -24px; /* Move nav links slightly to the left */
   }
 
   [data-mobile-menu] a {
@@ -142,5 +152,21 @@ h1, h2, h3, h4, h5, h6 {
 
   .mobile-signup {
     display: none;
+  }
+
+  [data-theme-toggle-desktop] {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+    z-index: 1001;
+    pointer-events: auto;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Increase space between nav links and theme toggle in desktop */
+  .desktop-theme-toggle {
+    margin-left: 180px; /* Increased space between nav links and theme toggle */
   }
 }

@@ -80,7 +80,7 @@ function initMobileMenu() {
 
     toggle.addEventListener("click", function () {
         menu.classList.toggle("active");
-    });
+        });
 }
 
 function highlightActiveLink() {
