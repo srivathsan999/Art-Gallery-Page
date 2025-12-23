@@ -89,23 +89,23 @@ function highlightActiveLink() {
     
     // Function to apply highlighting
     const applyHighlighting = () => {
-        const links = document.querySelectorAll('.nav-link');
-        links.forEach(link => {
+    const links = document.querySelectorAll('.nav-link');
+    links.forEach(link => {
             const href = link.getAttribute('href');
             // Normalize comparison - handle both with and without index.html
             const linkPage = href === 'index.html' ? '' : href;
             const pageToCheck = currentPage === 'index.html' ? '' : currentPage;
             
             if (href === currentPage || (currentPage === '' && href === 'index.html') || linkPage === pageToCheck) {
-                link.classList.add('text-black', 'dark:text-white', 'font-medium');
-                link.classList.remove('text-gray-600', 'dark:text-gray-300');
+            link.classList.add('text-black', 'dark:text-white', 'font-medium');
+            link.classList.remove('text-gray-600', 'dark:text-gray-300');
             } else {
                 link.classList.remove('text-black', 'dark:text-white', 'font-medium');
                 if (!link.classList.contains('text-black') && !link.classList.contains('dark:text-white')) {
                     link.classList.add('text-gray-600', 'dark:text-gray-300');
                 }
-            }
-        });
+        }
+    });
     };
     
     // Try immediately, then retry after navbar loads
