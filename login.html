@@ -55,11 +55,20 @@
                 </div>
 
                 <div class="space-y-1">
-                    <div class="flex justify-between">
-                        <label for="password" class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Password</label>
-                        <a href="#" class="text-xs text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white">Forgot?</a>
-                    </div>
+                    <label for="password" class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Password</label>
                     <input type="password" id="password" class="w-full bg-white/50 dark:bg-black/50 border border-gray-200 dark:border-gray-700 rounded p-3 text-gray-900 dark:text-white focus:outline-none focus:border-black dark:focus:border-white transition-colors">
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <input type="checkbox" id="remember" name="remember" class="w-4 h-4 bg-white/50 dark:bg-black/50 border border-gray-200 dark:border-gray-700 rounded focus:outline-none focus:border-black dark:focus:border-white transition-colors cursor-pointer">
+                        <label for="remember" class="text-sm text-gray-600 dark:text-gray-400 font-light cursor-pointer">
+                            Remember me
+                        </label>
+                    </div>
+                    <a href="#" class="text-sm text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors underline underline-offset-4">
+                        Forgot password?
+                    </a>
                 </div>
 
                 <button type="submit" class="w-full neo-btn py-3 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white uppercase text-xs tracking-widest font-medium transition-transform active:scale-95 mt-4">
