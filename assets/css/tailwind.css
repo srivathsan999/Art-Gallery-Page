@@ -2,39 +2,46 @@
 
 /* Base Styles */
 body {
-    font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
 }
 
 /* Utilities not covered by CDN default config or specific overrides */
 .glass {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .dark .glass {
-    background: rgba(0, 0, 0, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Neomorphism for buttons (Micro interactions only) */
 .neo-btn {
-    box-shadow: 5px 5px 10px #d1d1d1, -5px -5px 10px #ffffff;
+  box-shadow: 5px 5px 10px #d1d1d1, -5px -5px 10px #ffffff;
 }
+
 .dark .neo-btn {
-    box-shadow: 5px 5px 10px #0b0b0b, -5px -5px 10px #252525;
+  box-shadow: 5px 5px 10px #0b0b0b, -5px -5px 10px #252525;
 }
 
 .neo-btn:active {
-    box-shadow: inset 5px 5px 10px #d1d1d1, inset -5px -5px 10px #ffffff;
+  box-shadow: inset 5px 5px 10px #d1d1d1, inset -5px -5px 10px #ffffff;
 }
+
 .dark .neo-btn:active {
-    box-shadow: inset 5px 5px 10px #0b0b0b, inset -5px -5px 10px #252525;
+  box-shadow: inset 5px 5px 10px #0b0b0b, inset -5px -5px 10px #252525;
 }
 
 /* Navbar Styles */
@@ -111,18 +118,18 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
 }
 
-[data-mobile-menu] a {
+[data-mobile-menu] .nav-link {
   padding: 12px 0;
   border-bottom: 1px solid #eee;
   width: 100%;
   display: block;
 }
 
-.dark [data-mobile-menu] a {
+.dark [data-mobile-menu] .nav-link {
   border-bottom-color: #333;
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1280px) {
   [data-menu-toggle] {
     display: none;
   }
@@ -141,10 +148,11 @@ h1, h2, h3, h4, h5, h6 {
     background: transparent !important;
     box-shadow: none !important;
     padding: 0 !important;
-    margin-left: -24px; /* Move nav links slightly to the left */
+    margin-left: -24px;
+    /* Move nav links slightly to the left */
   }
 
-  [data-mobile-menu] a {
+  [data-mobile-menu] .nav-link {
     padding: 0 !important;
     border-bottom: none !important;
     width: auto !important;
@@ -153,6 +161,7 @@ h1, h2, h3, h4, h5, h6 {
   .mobile-signup {
     display: none;
   }
+
   .mobile-login {
     display: none;
   }
@@ -170,6 +179,7 @@ h1, h2, h3, h4, h5, h6 {
 
   /* Increase space between nav links and theme toggle in desktop */
   .desktop-theme-toggle {
-    margin-left: 180px; /* Increased space between nav links and theme toggle */
+    margin-left: 180px;
+    /* Increased space between nav links and theme toggle */
   }
 }
